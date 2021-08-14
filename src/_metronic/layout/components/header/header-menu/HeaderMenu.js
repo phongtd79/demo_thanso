@@ -20,10 +20,10 @@ export function HeaderMenu({ layoutProps }) {
         <ul className={`menu-nav ${layoutProps.ulClasses}`}>
             {/*begin::1 Level*/}
             <li className={`menu-item menu-item-rel ${getMenuItemActive('/dashboard')}`}>
-                <NavLink className="menu-link" to="/dashboard">
+                {/* <NavLink className="menu-link" to="/dashboard">
                     <span className="menu-text">Dashboard</span>
                     {layoutProps.rootArrowEnabled && (<i className="menu-arrow" />)}
-                </NavLink>
+                </NavLink> */}
             </li>
             {/*end::1 Level*/}
 
@@ -33,10 +33,10 @@ export function HeaderMenu({ layoutProps }) {
                 data-menu-toggle={layoutProps.menuDesktopToggle}
                 aria-haspopup="true"
                 className={`menu-item menu-item-submenu menu-item-rel ${getMenuItemActive('/google-material')}`}>
-                <NavLink className="menu-link menu-toggle" to="/google-material">
+                {/* <NavLink className="menu-link menu-toggle" to="/google-material">
                     <span className="menu-text">Material UI</span>
                     <i className="menu-arrow"></i>
-                </NavLink>
+                </NavLink> */}
                 <div className="menu-submenu menu-submenu-classic menu-submenu-left">
                     <ul className="menu-subnav">
                         {/*begin::2 Level*/}
@@ -603,10 +603,10 @@ export function HeaderMenu({ layoutProps }) {
                 data-menu-toggle={layoutProps.menuDesktopToggle}
                 aria-haspopup="true"
             >
-                <NavLink className="menu-link menu-toggle" to="/react-bootstrap">
+                {/* <NavLink className="menu-link menu-toggle" to="/react-bootstrap">
                     <span className="menu-text">Bootstrap</span>
                     <i className="menu-arrow"></i>
-                </NavLink>
+                </NavLink> */}
                 <div
                     className="menu-submenu menu-submenu-fixed menu-submenu-left"
                     style={{ width: "1000px" }}
@@ -872,10 +872,10 @@ export function HeaderMenu({ layoutProps }) {
                 data-menu-toggle={layoutProps.menuDesktopToggle}
                 aria-haspopup="true"
                 className={`menu-item menu-item-submenu menu-item-rel ${getMenuItemActive('/custom')}`}>
-                <NavLink className="menu-link menu-toggle" to="/custom">
+                {/* <NavLink className="menu-link menu-toggle" to="/custom">
                     <span className="menu-text">Custom</span>
                     <i className="menu-arrow"></i>
-                </NavLink>
+                </NavLink> */}
                 <div className="menu-submenu menu-submenu-classic menu-submenu-left">
                     <ul className="menu-subnav">
                         {/*begin::2 Level*/}

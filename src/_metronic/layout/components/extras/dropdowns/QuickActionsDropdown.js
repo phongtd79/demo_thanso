@@ -43,7 +43,7 @@ export function QuickActionsDropdown() {
       )}
       {!layoutProps.offcanvas && (
         <Dropdown drop="down" alignRight>
-          <Dropdown.Toggle
+          {/* <Dropdown.Toggle
             as={DropdownTopbarItemToggler}
             id="kt_quick_actions_panel_toggle"
           >
@@ -61,7 +61,7 @@ export function QuickActionsDropdown() {
                 </span>
               </div>
             </OverlayTrigger>
-          </Dropdown.Toggle>
+          </Dropdown.Toggle> */}
 
           <Dropdown.Menu className="p-0 m-0 dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-lg">
             <form>

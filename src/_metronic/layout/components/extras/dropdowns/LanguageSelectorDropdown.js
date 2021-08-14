@@ -45,7 +45,7 @@ export function LanguageSelectorDropdown() {
   const currentLanguage = languages.find((x) => x.lang === lang);
   return (
     <Dropdown drop="down" alignRight>
-      <Dropdown.Toggle
+      {/* <Dropdown.Toggle
         as={DropdownTopbarItemToggler}
         id="dropdown-toggle-my-cart"
       >
@@ -63,7 +63,7 @@ export function LanguageSelectorDropdown() {
             />
           </div>
         </OverlayTrigger>
-      </Dropdown.Toggle>
+      </Dropdown.Toggle> */}
       <Dropdown.Menu className="p-0 m-0 dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround">
         <ul className="navi navi-hover py-4">
           {languages.map((language) => (

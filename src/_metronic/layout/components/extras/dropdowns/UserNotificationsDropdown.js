@@ -44,7 +44,7 @@ export function UserNotificationsDropdown() {
       )}
       {!layoutProps.offcanvas && (
         <Dropdown drop="down" alignRight>
-          <Dropdown.Toggle
+          {/* <Dropdown.Toggle
             as={DropdownTopbarItemToggler}
             id="kt_quick_notifications_toggle"
           >
@@ -69,7 +69,7 @@ export function UserNotificationsDropdown() {
                 <span className="pulse-ring" />
               </div>
             </OverlayTrigger>
-          </Dropdown.Toggle>
+          </Dropdown.Toggle> */}
 
           <Dropdown.Menu className="dropdown-menu p-0 m-0 dropdown-menu-right dropdown-menu-anim-up dropdown-menu-lg">
             <form>

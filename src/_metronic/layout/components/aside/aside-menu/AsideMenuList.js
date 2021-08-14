@@ -28,13 +28,13 @@ export function AsideMenuList({ layoutProps }) {
             <span className="svg-icon menu-icon">
               <SVG src={toAbsoluteUrl("/media/svg/icons/Design/Layers.svg")} />
             </span>
-            <span className="menu-text">Dashboard</span>
+            <span className="menu-text">Trang chủ</span>
           </NavLink>
         </li>
         {/*end::1 Level*/}
 
         {/*begin::1 Level*/}
-        <li
+        {/* <li
           className={`menu-item ${getMenuItemActive("/builder", false)}`}
           aria-haspopup="true"
         >
@@ -44,19 +44,104 @@ export function AsideMenuList({ layoutProps }) {
             </span>
             <span className="menu-text">Layout Builder</span>
           </NavLink>
-        </li>
+        </li> */}
         {/*end::1 Level*/}
 
         {/* Components */}
         {/* begin::section */}
         <li className="menu-section ">
-          <h4 className="menu-text">Components</h4>
+          <h4 className="menu-text">Đại lý</h4>
           <i className="menu-icon flaticon-more-v2"></i>
         </li>
         {/* end:: section */}
 
         {/* Material-UI */}
         {/*begin::1 Level*/}
+
+        {/* ------------------------------------------------------ */}
+
+        <li
+          className={`menu-item ${getMenuItemActive("/user-profile", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/user-profile">
+            <span className="svg-icon menu-icon">
+              <SVG
+                src={toAbsoluteUrl(
+                  "/media/svg/icons/Layout/Layout-4-blocks.svg"
+                )}
+              />
+            </span>
+            <span className="menu-text">Đại lý</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/user-profile", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/user-profile">
+            <span className="svg-icon menu-icon">
+              <SVG
+                src={toAbsoluteUrl(
+                  "/media/svg/icons/Shopping/Barcode-read.svg"
+                )}
+              />
+            </span>
+            <span className="menu-text">Thêm mới</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/user-profile", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/user-profile">
+            <span className="svg-icon menu-icon">
+              <SVG
+                src={toAbsoluteUrl(
+                  "/media/svg/icons/Code/Compiling.svg"
+                )}
+              />
+            </span>
+            <span className="menu-text">Danh sách</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/user-profile", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/user-profile">
+            <span className="svg-icon menu-icon">
+              <SVG
+                src={toAbsoluteUrl(
+                  "/media/svg/icons/General/Settings-1.svg"
+                )}
+              />
+            </span>
+            <span className="menu-text">Chuyển hồ sơ</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/user-profile", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/user-profile">
+            <span className="svg-icon menu-icon">
+              <SVG
+                src={toAbsoluteUrl(
+                  "/media/svg/icons/Home/Library.svg"
+                )}
+              />
+            </span>
+            <span className="menu-text">In hồ sơ</span>
+          </NavLink>
+        </li>
+
+
+        {/* ----------------------------------------------------- */}
         <li
           className={`menu-item menu-item-submenu ${getMenuItemActive(
             "/google-material",
@@ -65,19 +150,19 @@ export function AsideMenuList({ layoutProps }) {
           aria-haspopup="true"
           data-menu-toggle="hover"
         >
-          <NavLink className="menu-link menu-toggle" to="/google-material">
+          {/* <NavLink className="menu-link menu-toggle" to="/google-material">
             <span className="svg-icon menu-icon">
               <SVG src={toAbsoluteUrl("/media/svg/icons/Design/Cap-2.svg")} />
             </span>
-            <span className="menu-text">Material UI</span>
+            <span className="menu-text">Đại lý</span>
             <i className="menu-arrow" />
-          </NavLink>
+          </NavLink> */}
           <div className="menu-submenu ">
             <i className="menu-arrow" />
             <ul className="menu-subnav">
               <li className="menu-item  menu-item-parent" aria-haspopup="true">
                 <span className="menu-link">
-                  <span className="menu-text">Material UI</span>
+                  <span className="menu-text">Đại lý</span>
                 </span>
               </li>
 
@@ -1120,13 +1205,13 @@ export function AsideMenuList({ layoutProps }) {
           aria-haspopup="true"
           data-menu-toggle="hover"
         >
-          <NavLink className="menu-link menu-toggle" to="/react-bootstrap">
+          {/* <NavLink className="menu-link menu-toggle" to="/react-bootstrap">
             <span className="svg-icon menu-icon">
               <SVG src={toAbsoluteUrl("/media/svg/icons/Shopping/Box2.svg")} />
             </span>
             <span className="menu-text">Bootstrap</span>
             <i className="menu-arrow" />
-          </NavLink>
+          </NavLink> */}
           <div className="menu-submenu ">
             <ul className="menu-subnav">
               <ul className="menu-subnav">
@@ -1583,10 +1668,10 @@ export function AsideMenuList({ layoutProps }) {
 
         {/* Applications */}
         {/* begin::section */}
-        <li className="menu-section ">
+        {/* <li className="menu-section ">
           <h4 className="menu-text">Applications</h4>
           <i className="menu-icon flaticon-more-v2"></i>
-        </li>
+        </li> */}
         {/* end:: section */}
 
         {/* eCommerce */}
@@ -1599,12 +1684,12 @@ export function AsideMenuList({ layoutProps }) {
           aria-haspopup="true"
           data-menu-toggle="hover"
         >
-          <NavLink className="menu-link menu-toggle" to="/e-commerce">
+          {/* <NavLink className="menu-link menu-toggle" to="/e-commerce">
             <span className="svg-icon menu-icon">
               <SVG src={toAbsoluteUrl("/media/svg/icons/Shopping/Bag2.svg")} />
             </span>
             <span className="menu-text">eCommerce</span>
-          </NavLink>
+          </NavLink> */}
           <div className="menu-submenu">
             <i className="menu-arrow" />
             <ul className="menu-subnav">
@@ -1649,34 +1734,20 @@ export function AsideMenuList({ layoutProps }) {
         {/*end::1 Level*/}
 
         {/*begin::1 Level*/}
-        <li
-          className={`menu-item ${getMenuItemActive("/user-profile", false)}`}
-          aria-haspopup="true"
-        >
-          <NavLink className="menu-link" to="/user-profile">
-            <span className="svg-icon menu-icon">
-              <SVG
-                src={toAbsoluteUrl(
-                  "/media/svg/icons/Communication/Add-user.svg"
-                )}
-              />
-            </span>
-            <span className="menu-text">User Profile</span>
-          </NavLink>
-        </li>
+        
         {/*end::1 Level*/}
 
         {/* Custom */}
         {/* begin::section */}
-        <li className="menu-section ">
+        {/* <li className="menu-section ">
           <h4 className="menu-text">Custom</h4>
           <i className="menu-icon flaticon-more-v2"></i>
-        </li>
+        </li> */}
         {/* end:: section */}
 
         {/* Error Pages */}
         {/*begin::1 Level*/}
-        <li
+        {/* <li
           className={`menu-item menu-item-submenu ${getMenuItemActive(
             "/error",
             true
@@ -1702,7 +1773,7 @@ export function AsideMenuList({ layoutProps }) {
                 </span>
               </li>
 
-              {/*begin::2 Level*/}
+              
               <li
                 className={`menu-item ${getMenuItemActive("/error/error-v1")}`}
                 aria-haspopup="true"
@@ -1714,9 +1785,9 @@ export function AsideMenuList({ layoutProps }) {
                   <span className="menu-text">Error Page - 1</span>
                 </NavLink>
               </li>
-              {/*end::2 Level*/}
+              
 
-              {/*begin::2 Level*/}
+             
               <li
                 className={`menu-item ${getMenuItemActive("/error/error-v2")}`}
                 aria-haspopup="true"
@@ -1728,9 +1799,9 @@ export function AsideMenuList({ layoutProps }) {
                   <span className="menu-text">Error Page -2</span>
                 </NavLink>
               </li>
-              {/*end::2 Level*/}
+             
 
-              {/*begin::2 Level*/}
+            
               <li
                 className={`menu-item ${getMenuItemActive("/error/error-v3")}`}
                 aria-haspopup="true"
@@ -1742,9 +1813,9 @@ export function AsideMenuList({ layoutProps }) {
                   <span className="menu-text">Error Page - 3</span>
                 </NavLink>
               </li>
-              {/*end::2 Level*/}
+             
 
-              {/*begin::2 Level*/}
+             
               <li
                 className={`menu-item ${getMenuItemActive("/error/error-v4")}`}
                 aria-haspopup="true"
@@ -1756,9 +1827,7 @@ export function AsideMenuList({ layoutProps }) {
                   <span className="menu-text">Error Page - 4</span>
                 </NavLink>
               </li>
-              {/*end::2 Level*/}
-
-              {/*begin::2 Level*/}
+              
               <li
                 className={`menu-item ${getMenuItemActive("/error/error-v5")}`}
                 aria-haspopup="true"
@@ -1770,9 +1839,9 @@ export function AsideMenuList({ layoutProps }) {
                   <span className="menu-text">Error Page - 5</span>
                 </NavLink>
               </li>
-              {/*end::2 Level*/}
+              
 
-              {/*begin::2 Level*/}
+              
               <li
                 className={`menu-item ${getMenuItemActive("/error/error-v6")}`}
                 aria-haspopup="true"
@@ -1784,10 +1853,10 @@ export function AsideMenuList({ layoutProps }) {
                   <span className="menu-text">Error Page - 6</span>
                 </NavLink>
               </li>
-              {/*end::2 Level*/}
+             
             </ul>
           </div>
-        </li>
+        </li> */}
         {/*end::1 Level*/}
       </ul>
 

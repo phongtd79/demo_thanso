@@ -28,10 +28,10 @@ export function Footer() {
             rel="noopener noreferrer"
             className="text-dark-75 text-hover-primary"
           >
-            Keenthemes
+            nangluongso.vn - Supported by absoft.com.vn
           </a>
         </div>
-        <div className="nav nav-dark order-1 order-md-2">
+        {/* <div className="nav nav-dark order-1 order-md-2">
           <a
             href="http://keenthemes.com/metronic"
             target="_blank"
@@ -56,7 +56,7 @@ export function Footer() {
           >
             Contact
           </a>
-        </div>
+        </div> */}
       </div>
     </div>
   );

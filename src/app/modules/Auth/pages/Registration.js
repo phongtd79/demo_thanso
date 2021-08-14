@@ -9,16 +9,18 @@ import { register } from "../_redux/authCrud";
 
 const initialValues = {
   fullname: "",
-  email: "",
-  username: "",
+  birthdate: "",
+  phone: "",
   password: "",
   changepassword: "",
-  acceptTerms: false,
+  refferalcode: "",
+  // acceptTerms: false,
 };
 
 function Registration(props) {
   const { intl } = props;
   const [loading, setLoading] = useState(false);
+  const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
   const RegistrationSchema = Yup.object().shape({
     fullname: Yup.string()
       .min(3, "Minimum 3 symbols")
@@ -28,18 +30,16 @@ function Registration(props) {
           id: "AUTH.VALIDATION.REQUIRED_FIELD",
         })
       ),
-    email: Yup.string()
-      .email("Wrong email format")
-      .min(3, "Minimum 3 symbols")
-      .max(50, "Maximum 50 symbols")
+    birthdate: Yup.date()
       .required(
         intl.formatMessage({
           id: "AUTH.VALIDATION.REQUIRED_FIELD",
         })
       ),
-    username: Yup.string()
-      .min(3, "Minimum 3 symbols")
-      .max(50, "Maximum 50 symbols")
+    phone: Yup.string()
+      .matches(phoneRegExp, 'Phone number is not valid')
+      .min(10, "Minimum 10 symbols")
+      .max(10, "Maximum 10 symbols")
       .required(
         intl.formatMessage({
           id: "AUTH.VALIDATION.REQUIRED_FIELD",
@@ -66,9 +66,17 @@ function Registration(props) {
           "Password and Confirm Password didn't match"
         ),
       }),
-    acceptTerms: Yup.bool().required(
-      "You must accept the terms and conditions"
-    ),
+    // acceptTerms: Yup.bool().required(
+    //   "You must accept the terms and conditions"
+    // ),
+    refferalcode: Yup.string()
+      .min(3, "Minimum 3 symbols")
+      .max(50, "Maximum 50 symbols")
+      .required(
+        intl.formatMessage({
+          id: "AUTH.VALIDATION.REQUIRED_FIELD",
+        })
+      ),
   });
 
   const enableLoading = () => {
@@ -97,7 +105,7 @@ function Registration(props) {
     onSubmit: (values, { setStatus, setSubmitting }) => {
       setSubmitting(true);
       enableLoading();
-      register(values.email, values.fullname, values.username, values.password)
+      register(values.birthdate, values.fullname, values.phone, values.password)
         .then(({ data: { accessToken } }) => {
           props.register(accessToken);
           disableLoading();
@@ -122,7 +130,7 @@ function Registration(props) {
           <FormattedMessage id="AUTH.REGISTER.TITLE" />
         </h3>
         <p className="text-muted font-weight-bold">
-          Enter your details to create your account
+          Vui lòng nhập tên và mật khẩu
         </p>
       </div>
 
@@ -141,8 +149,9 @@ function Registration(props) {
 
         {/* begin: Fullname */}
         <div className="form-group fv-plugins-icon-container">
+          <label className="text-dark">Họ và tên *</label>
           <input
-            placeholder="Full name"
+            placeholder=""
             type="text"
             className={`form-control form-control-solid h-auto py-5 px-6 ${getInputClasses(
               "fullname"
@@ -158,86 +167,116 @@ function Registration(props) {
         </div>
         {/* end: Fullname */}
 
-        {/* begin: Email */}
-        <div className="form-group fv-plugins-icon-container">
-          <input
-            placeholder="Email"
-            type="email"
-            className={`form-control form-control-solid h-auto py-5 px-6 ${getInputClasses(
-              "email"
-            )}`}
-            name="email"
-            {...formik.getFieldProps("email")}
-          />
-          {formik.touched.email && formik.errors.email ? (
-            <div className="fv-plugins-message-container">
-              <div className="fv-help-block">{formik.errors.email}</div>
-            </div>
-          ) : null}
-        </div>
-        {/* end: Email */}
+        <div className="form-group fv-plugins-icon-container d-flex justify-content-between">
+          {/* begin: birthdate */}
+          <div>
+            <label className="text-dark">Ngày sinh *</label>
+            <input
+              placeholder=""
+              type="text"
+              className={`form-control form-control-solid h-auto py-5 px-6 ${getInputClasses(
+                "birthdate"
+              )}`}
+              name="birthdate"
+              {...formik.getFieldProps("birthdate")}
+            />
+            {formik.touched.birthdate && formik.errors.birthdate ? (
+              <div className="fv-plugins-message-container">
+                <div className="fv-help-block">{formik.errors.birthdate}</div>
+              </div>
+            ) : null}
+          </div>
+          {/* end: birthdate */}
 
-        {/* begin: Username */}
+          {/* begin: phone */}
+          <div>
+            <label className="text-dark">Điện thoại *</label>
+            <input
+              placeholder=""
+              type="text"
+              className={`form-control form-control-solid h-auto py-5 px-6 ${getInputClasses(
+                "phone"
+              )}`}
+              name="phone"
+              {...formik.getFieldProps("phone")}
+            />
+            {formik.touched.phone && formik.errors.phone ? (
+              <div className="fv-plugins-message-container">
+                <div className="fv-help-block">{formik.errors.phone}</div>
+              </div>
+            ) : null}
+          </div>
+          {/* end: phone */}
+        </div>
+
+        <div className="form-group fv-plugins-icon-container d-flex justify-content-between">
+          {/* begin: Password */}
+          <div>
+            <label className="text-dark">Mật khẩu</label>
+            <input
+              placeholder=""
+              type="password"
+              className={`form-control form-control-solid h-auto py-5 px-6 ${getInputClasses(
+                "password"
+              )}`}
+              name="password"
+              {...formik.getFieldProps("password")}
+            />
+            {formik.touched.password && formik.errors.password ? (
+              <div className="fv-plugins-message-container">
+                <div className="fv-help-block">{formik.errors.password}</div>
+              </div>
+            ) : null}
+          </div>
+          {/* end: Password */}
+
+          {/* begin: Confirm Password */}
+          <div>
+            <label className="text-dark">Xác nhận mật khẩu</label>
+            <input
+              placeholder=""
+              type="password"
+              className={`form-control form-control-solid h-auto py-5 px-6 ${getInputClasses(
+                "changepassword"
+              )}`}
+              name="changepassword"
+              {...formik.getFieldProps("changepassword")}
+            />
+            {formik.touched.changepassword && formik.errors.changepassword ? (
+              <div className="fv-plugins-message-container">
+                <div className="fv-help-block">
+                  {formik.errors.changepassword}
+                </div>
+              </div>
+            ) : null}
+          </div>
+          {/* end: Confirm Password */}
+        </div>
+
+        {/* begin: Referral code */}
         <div className="form-group fv-plugins-icon-container">
+          <label className="text-dark">Mã giới thiệu</label>
           <input
-            placeholder="User name"
+            placeholder=""
             type="text"
             className={`form-control form-control-solid h-auto py-5 px-6 ${getInputClasses(
-              "username"
+              "refferalcode"
             )}`}
-            name="username"
-            {...formik.getFieldProps("username")}
+            name="refferalcode"
+            {...formik.getFieldProps("refferalcode")}
           />
-          {formik.touched.username && formik.errors.username ? (
-            <div className="fv-plugins-message-container">
-              <div className="fv-help-block">{formik.errors.username}</div>
-            </div>
-          ) : null}
-        </div>
-        {/* end: Username */}
-
-        {/* begin: Password */}
-        <div className="form-group fv-plugins-icon-container">
-          <input
-            placeholder="Password"
-            type="password"
-            className={`form-control form-control-solid h-auto py-5 px-6 ${getInputClasses(
-              "password"
-            )}`}
-            name="password"
-            {...formik.getFieldProps("password")}
-          />
-          {formik.touched.password && formik.errors.password ? (
-            <div className="fv-plugins-message-container">
-              <div className="fv-help-block">{formik.errors.password}</div>
-            </div>
-          ) : null}
-        </div>
-        {/* end: Password */}
-
-        {/* begin: Confirm Password */}
-        <div className="form-group fv-plugins-icon-container">
-          <input
-            placeholder="Confirm Password"
-            type="password"
-            className={`form-control form-control-solid h-auto py-5 px-6 ${getInputClasses(
-              "changepassword"
-            )}`}
-            name="changepassword"
-            {...formik.getFieldProps("changepassword")}
-          />
-          {formik.touched.changepassword && formik.errors.changepassword ? (
+          {formik.touched.refferalcode && formik.errors.refferalcode ? (
             <div className="fv-plugins-message-container">
               <div className="fv-help-block">
-                {formik.errors.changepassword}
+                {formik.errors.refferalcode}
               </div>
             </div>
           ) : null}
         </div>
-        {/* end: Confirm Password */}
+        {/* end: Referral code */}
 
         {/* begin: Terms and Conditions */}
-        <div className="form-group">
+        {/* <div className="form-group">
           <label className="checkbox">
             <input
               type="checkbox"
@@ -252,7 +291,7 @@ function Registration(props) {
               rel="noopener noreferrer"
             >
               I agree the Terms & Conditions
-            </Link>
+            </Link> 
             <span />
           </label>
           {formik.touched.acceptTerms && formik.errors.acceptTerms ? (
@@ -260,30 +299,30 @@ function Registration(props) {
               <div className="fv-help-block">{formik.errors.acceptTerms}</div>
             </div>
           ) : null}
-        </div>
+        </div> */}
         {/* end: Terms and Conditions */}
-        <div className="form-group d-flex flex-wrap flex-center">
+        <div className="form-group d-flex flex-wrap flex-row-reverse">
           <button
             type="submit"
             disabled={
               formik.isSubmitting ||
-              !formik.isValid ||
-              !formik.values.acceptTerms
+              !formik.isValid 
+              // !formik.values.acceptTerms
             }
             className="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4"
           >
-            <span>Submit</span>
+            <span>Đăng ký</span>
             {loading && <span className="ml-3 spinner spinner-white"></span>}
           </button>
 
-          <Link to="/auth/login">
+          {/* <Link to="/auth/login">
             <button
               type="button"
               className="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-4"
             >
               Cancel
             </button>
-          </Link>
+          </Link> */}
         </div>
       </form>
     </div>

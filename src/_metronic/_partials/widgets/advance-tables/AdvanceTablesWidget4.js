@@ -9,12 +9,12 @@ export function AdvanceTablesWidget4({ className }) {
         {/* Head */}
         <div className="card-header border-0 py-5">
           <h3 className="card-title align-items-start flex-column">
-            <span className="card-label font-weight-bolder text-dark">Agents Stats</span>
-            <span className="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span>
+            <span className="card-label font-weight-bolder text-dark">Danh sách tài khoản đại lý</span>
+            <span className="text-muted mt-3 font-weight-bold font-size-sm">Tổng: 20 đại lý</span>
           </h3>
           <div className="card-toolbar">
-            <a href="#" className="btn btn-info font-weight-bolder font-size-sm mr-3">New Report</a>
-            <a href="#" className="btn btn-danger font-weight-bolder font-size-sm">Create</a>
+            <a href="#" className="btn btn-primary font-weight-bolder font-size-sm mr-3">Chuyển HS</a>
+            <a href="#" className="btn btn-danger font-weight-bolder font-size-sm">Thêm mới</a>
           </div>
         </div>
         {/* Body */}
@@ -24,11 +24,11 @@ export function AdvanceTablesWidget4({ className }) {
               <table className="table table-head-custom table-head-bg table-borderless table-vertical-center">
                 <thead>
                 <tr className="text-left text-uppercase">
-                  <th className="pl-7" style={{minWidth: "250px"}}><span className="text-dark-75">products</span></th>
-                  <th style={{minWidth: "100px"}}>earnings</th>
-                  <th style={{minWidth: "100px"}}></th>
-                  <th style={{minWidth: "100px"}}>company</th>
-                  <th style={{minWidth: "130px"}}>rating</th>
+                  <th className="pl-7" style={{minWidth: "250px"}}><span className="text-dark-75">tên đại lý</span></th>
+                  <th style={{minWidth: "100px"}}>tổng hồ sơ</th>
+                  {/* <th style={{minWidth: "100px"}}></th> */}
+                  <th style={{minWidth: "100px"}}>còn lại</th>
+                  <th style={{minWidth: "130px"}}>ngày tạo</th>
                   <th style={{minWidth: "80px"}}/>
                 </tr>
                 </thead>
@@ -46,42 +46,45 @@ export function AdvanceTablesWidget4({ className }) {
                       <div>
                         <a href="#" className="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Brad
                           Simmons</a>
-                        <span className="text-muted font-weight-bold d-block">HTML, JS, ReactJS</span>
+                        <span className="text-muted font-weight-bold d-block">Cấp 1</span>
                       </div>
                     </div>
                   </td>
                   <td>
                       <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                        $8,000,000
+                        100
                       </span>
-                    <span className="text-muted font-weight-bold">
+                      {/* <span className="text-muted font-weight-bold">
                         In Proccess
-                      </span>
+                      </span> */}
                   </td>
-                  <td>
+                  {/* <td>
                       <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
                         $520
                       </span>
-                    <span className="text-muted font-weight-bold">
+                      <span className="text-muted font-weight-bold">
                         Paid
                       </span>
-                  </td>
+                  </td> */}
                   <td>
                       <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                        Intertico
+                        1
                       </span>
-                    <span className="text-muted font-weight-bold">
+                      {/* <span className="text-muted font-weight-bold">
                         Web, UI/UX Design
-                      </span>
+                      </span> */}
                   </td>
                   <td>
-                    <img src={toAbsoluteUrl("/media/logos/stars.png")} alt="image" style={{width: "5.5rem"}}/>
-                    <span className="text-muted font-weight-bold d-block font-size-sm">
-                        Best Rated
+                    {/* <img src={toAbsoluteUrl("/media/logos/stars.png")} alt="image" style={{width: "5.5rem"}}/> */}
+                      <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
+                        10/10/2021
                       </span>
                   </td>
                   <td className="pr-0 text-right">
-                    <a href="#" className="btn btn-light-success font-weight-bolder font-size-sm">View Offer</a>
+                    <a href="#" className="btn btn-light-success font-weight-bolder font-size-sm"
+                       style={{width: "7rem"}}>
+                      Xem
+                    </a>
                   </td>
                 </tr>
                 <tr>
@@ -97,42 +100,45 @@ export function AdvanceTablesWidget4({ className }) {
                       <div>
                         <a href="#" className="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Jessie
                           Clarcson</a>
-                        <span className="text-muted font-weight-bold d-block">C#, ASP.NET, MS SQL</span>
+                        <span className="text-muted font-weight-bold d-block">Cấp 2</span>
                       </div>
                     </div>
                   </td>
                   <td>
                     <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                      $23,000,000
+                      100
                     </span>
-                    <span className="text-muted font-weight-bold">
+                    {/* <span className="text-muted font-weight-bold">
                       Pending
-                    </span>
+                    </span> */}
                   </td>
-                  <td>
+                  {/* <td>
                     <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
                       $1,600
                     </span>
                     <span className="text-muted font-weight-bold">
                       Rejected
                     </span>
-                  </td>
+                  </td> */}
                   <td>
                     <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                      Agoda
+                      1
                     </span>
-                    <span className="text-muted font-weight-bold">
+                    {/* <span className="text-muted font-weight-bold">
                       Houses & Hotels
-                    </span>
+                    </span> */}
                   </td>
                   <td>
-                    <img src={toAbsoluteUrl("/media/logos/stars.png")} alt="image" style={{width: "5.5rem"}}/>
-                    <span className="text-muted font-weight-bold d-block font-size-sm">
-                      Above Avarage
+                    {/* <img src={toAbsoluteUrl("/media/logos/stars.png")} alt="image" style={{width: "5.5rem"}}/> */}
+                    <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
+                      10/10/2021
                     </span>
                   </td>
                   <td className="pr-0 text-right">
-                    <a href="#" className="btn btn-light-success font-weight-bolder font-size-sm">View Offer</a>
+                    <a href="#" className="btn btn-light-success font-weight-bolder font-size-sm"
+                       style={{width: "7rem"}}>
+                      Xem
+                    </a>
                   </td>
                 </tr>
                 <tr>
@@ -149,42 +155,45 @@ export function AdvanceTablesWidget4({ className }) {
                         <a href="#" className="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">
                           Lebron Wayde
                         </a>
-                        <span className="text-muted font-weight-bold d-block">PHP, Laravel, VueJS</span>
+                        <span className="text-muted font-weight-bold d-block">Cấp 2</span>
                       </div>
                     </div>
                   </td>
                   <td>
                     <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                      $34,000,000
+                      100
                     </span>
-                    <span className="text-muted font-weight-bold">
+                    {/* <span className="text-muted font-weight-bold">
                       Paid
-                    </span>
+                    </span> */}
                   </td>
-                  <td>
+                  {/* <td>
                     <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
                       $6,700
                     </span>
                     <span className="text-muted font-weight-bold">
                       Paid
                     </span>
-                  </td>
+                  </td> */}
                   <td>
                     <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                      RoadGee
+                      1
                     </span>
-                    <span className="text-muted font-weight-bold">
+                    {/* <span className="text-muted font-weight-bold">
                       Paid
-                    </span>
+                    </span> */}
                   </td>
                   <td>
-                    <img src={toAbsoluteUrl("/media/logos/stars.png")} alt="image" style={{width: "5.5rem"}}/>
-                    <span className="text-muted font-weight-bold d-block font-size-sm">
-                      Best Rated
+                    {/* <img src={toAbsoluteUrl("/media/logos/stars.png")} alt="image" style={{width: "5.5rem"}}/> */}
+                    <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
+                      10/10/2021
                     </span>
                   </td>
                   <td className="pr-0 text-right">
-                    <a href="#" className="btn btn-light-success font-weight-bolder font-size-sm">View Offer</a>
+                    <a href="#" className="btn btn-light-success font-weight-bolder font-size-sm"
+                       style={{width: "7rem"}}>
+                      Xem
+                    </a>
                   </td>
                 </tr>
                 <tr>
@@ -201,44 +210,44 @@ export function AdvanceTablesWidget4({ className }) {
                         <a href="#" className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">
                           Natali Trump
                         </a>
-                        <span className="text-muted font-weight-bold d-block">Python, PostgreSQL, ReactJS</span>
+                        <span className="text-muted font-weight-bold d-block">Cấp 2</span>
                       </div>
                     </div>
                   </td>
                   <td className="text-left pr-0">
                     <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                      $2,600,000
+                      100
                     </span>
-                    <span className="text-muted font-weight-bold">
+                    {/* <span className="text-muted font-weight-bold">
                       Paid
-                    </span>
+                    </span> */}
                   </td>
-                  <td>
+                  {/* <td>
                     <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
                       $14,000
                     </span>
                     <span className="text-muted font-weight-bold">
                       Pending
                     </span>
-                  </td>
+                  </td> */}
                   <td>
                     <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
-                      The Hill
+                      1
                     </span>
-                    <span className="text-muted font-weight-bold">
+                    {/* <span className="text-muted font-weight-bold">
                       Insurance
-                    </span>
+                    </span> */}
                   </td>
                   <td>
-                    <img src={toAbsoluteUrl("/media/logos/stars.png")} alt="image" style={{width: "5.5rem"}}/>
-                    <span className="text-muted font-weight-bold d-block font-size-sm">
-                      Avarage
+                    {/* <img src={toAbsoluteUrl("/media/logos/stars.png")} alt="image" style={{width: "5.5rem"}}/> */}
+                    <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
+                      10/10/2021
                     </span>
                   </td>
                   <td className="pr-0 text-right">
                     <a href="#" className="btn btn-light-success font-weight-bolder font-size-sm"
                        style={{width: "7rem"}}>
-                      View Offer
+                      Xem
                     </a>
                   </td>
                 </tr>

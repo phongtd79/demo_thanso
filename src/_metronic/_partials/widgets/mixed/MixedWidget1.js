@@ -53,8 +53,8 @@ export function MixedWidget1({ className }) {
     <div className={`card card-custom bg-gray-100 ${className}`}>
       {/* Header */}
       <div className="card-header border-0 bg-danger py-5">
-        <h3 className="card-title font-weight-bolder text-white">Sales Stat</h3>
-        <div className="card-toolbar">
+        <h3 className="card-title font-weight-bolder text-white">Danh sách đại lý</h3>
+        {/* <div className="card-toolbar">
           <Dropdown className="dropdown-inline" drop="down" alignRight>
             <Dropdown.Toggle
               className="btn btn-transparent-white btn-sm font-weight-bolder dropdown-toggle px-5"
@@ -66,7 +66,7 @@ export function MixedWidget1({ className }) {
               <DropdownMenu2 />
             </Dropdown.Menu>
           </Dropdown>
-        </div>
+        </div> */}
       </div>
       {/* Body */}
       <div className="card-body p-0 position-relative overflow-hidden">
@@ -90,11 +90,11 @@ export function MixedWidget1({ className }) {
                 href="#"
                 className="text-warning font-weight-bold font-size-h6"
               >
-                Weekly Sales
+                3000 Coins
               </a>
             </div>
-            <div className="col bg-light-primary px-6 py-8 rounded-xl mb-7">
-              <span className="svg-icon svg-icon-3x svg-icon-primary d-block my-2">
+            <div className="col bg-light-info px-6 py-8 rounded-xl mb-7">
+              <span className="svg-icon svg-icon-3x svg-icon-info d-block my-2">
                 <SVG
                   src={toAbsoluteUrl(
                     "/media/svg/icons/Communication/Add-user.svg"
@@ -103,9 +103,9 @@ export function MixedWidget1({ className }) {
               </span>
               <a
                 href="#"
-                className="text-primary font-weight-bold font-size-h6 mt-2"
+                className="text-info font-weight-bold font-size-h6 mt-2"
               >
-                New Users
+                Thêm đại lý
               </a>
             </div>
           </div>
@@ -120,7 +120,7 @@ export function MixedWidget1({ className }) {
                 href="#"
                 className="text-danger font-weight-bold font-size-h6 mt-2"
               >
-                Item Orders
+                200 hồ sơ
               </a>
             </div>
             <div className="col bg-light-success px-6 py-8 rounded-xl">
@@ -135,7 +135,7 @@ export function MixedWidget1({ className }) {
                 href="#"
                 className="text-success font-weight-bold font-size-h6 mt-2"
               >
-                Bug Reports
+                20 đại lý
               </a>
             </div>
           </div>
