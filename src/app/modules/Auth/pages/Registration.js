@@ -169,7 +169,7 @@ function Registration(props) {
 
         <div className="form-group fv-plugins-icon-container d-flex justify-content-between">
           {/* begin: birthdate */}
-          <div>
+          <div className="mr-2">
             <label className="text-dark">Ngày sinh *</label>
             <input
               placeholder=""
@@ -211,7 +211,7 @@ function Registration(props) {
 
         <div className="form-group fv-plugins-icon-container d-flex justify-content-between">
           {/* begin: Password */}
-          <div>
+          <div className="mr-2">
             <label className="text-dark">Mật khẩu</label>
             <input
               placeholder=""
